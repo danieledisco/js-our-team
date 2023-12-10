@@ -87,8 +87,15 @@ for ( let i = 0; i < teamList.length; i++ )
     console.log('-------------------');
 }
 
+/**
+ * Milestone 2
+ * Copiamo qui il pezzo di html che conterrà le varie indormazioni dei menbri
+ * e poi inseriamole nella pagina attaccandole all'elemento riga tramite
+ * innerHTML +=
+ */
 
-const postsRowEl = document.querySelector('.posts .row')
+
+/* const postsRowEl = document.querySelector('.posts .row')
 
 for ( let i = 0; i < teamList.length; i++)
 {
@@ -106,6 +113,32 @@ for ( let i = 0; i < teamList.length; i++)
     `
     postsRowEl.innerHTML += postMarkup;
 
+} */
+
+/**
+ * Bonus 1 + Bonus 2
+ * Modifichiamo leggermente la sezione precedente, inserendo l'elemento img che
+ * andrà a pescare dalla directory img tutte le foto
+ */
+
+const postsRowEl = document.querySelector('.posts .row')
+
+for ( let i = 0; i < teamList.length; i++)
+{
+    const member = teamList[i];
+
+    const postMarkup = 
+    `
+    <div class="col">
+        <div class="card p-4">
+            <img class="card-img-top" src='./img/${member.photoMember}' style alt='' />
+            <div class="card-body">
+                <h2>${member.nameMember}</h2>
+                <h3>${member.taskMember}</h3>
+            </div>
+        </div>
+    </div>
+    `
+    postsRowEl.innerHTML += postMarkup;
+
 }
-
-
