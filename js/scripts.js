@@ -73,4 +73,14 @@ const teamList =
     }
 ]
 
-console.log(teamList);
+/**
+ * Facciamo un ciclo sulla teamList e per ogni i estraiamo un membro e ne stampiamo i vari campi in console
+ */
+for ( let i = 0; i < teamList.length; i++ )
+{
+    let member = teamList[i];
+    console.log(`Memebr name : ${member.nameMember}`);
+    console.log(`Member task : ${member.taskMember}`);
+    console.log(`Member photo : ${member.photoMember}`);
+    console.log('-------------------');
+}
