@@ -32,8 +32,9 @@
 
 
 
-
-
+/**
+ *  Milestone 0
+ */
 const teamList =
 [
     {
@@ -74,6 +75,7 @@ const teamList =
 ]
 
 /**
+ * Milestone 1
  * Facciamo un ciclo sulla teamList e per ogni i estraiamo un membro e ne stampiamo i vari campi in console
  */
 for ( let i = 0; i < teamList.length; i++ )
@@ -84,3 +86,26 @@ for ( let i = 0; i < teamList.length; i++ )
     console.log(`Member photo : ${member.photoMember}`);
     console.log('-------------------');
 }
+
+
+const postsRowEl = document.querySelector('.posts .row')
+
+for ( let i = 0; i < teamList.length; i++)
+{
+    const member = teamList[i];
+
+    const postMarkup = 
+    `
+    <div class="col">
+        <div class="card p-4">
+            <h2>${member.nameMember}</h2>
+            <h3>${member.taskMember}</h3>
+            <h4>${member.photoMember}</h4>
+        </div>
+    </div>
+    `
+    postsRowEl.innerHTML += postMarkup;
+
+}
+
+
